@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot Estatuto UASD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <h1>Chatbot Inteligente - Estatuto UASD</h1>
+          <p>Respuestas basadas exclusivamente en el Estatuto Organico oficial.</p>
+        </div>
+      </header>
+
+      <main class="chat-layout">
+        <section class="chat-panel">
+          <div id="chatMessages" class="chat-messages" aria-live="polite"></div>
+
+          <div class="composer">
+            <textarea
+              id="questionInput"
+              rows="2"
+              maxlength="1000"
+              placeholder="Escribe tu pregunta sobre el Estatuto Organico de la UASD..."
+            ></textarea>
+            <button id="sendBtn" class="send-btn">Enviar</button>
+          </div>
+        </section>
+
+        <aside class="suggestions-panel">
+          <h2>Preguntas sugeridas</h2>
+          <p class="small-note">Haz clic para llenar automaticamente el campo.</p>
+          <div id="suggestionsList" class="suggestions-list"></div>
+        </aside>
+      </main>
+    </div>
+
+    <template id="messageTemplate">
+      <article class="message">
+        <div class="avatar"></div>
+        <div class="bubble-wrap">
+          <p class="role"></p>
+          <div class="bubble"></div>
+        </div>
+      </article>
+    </template>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

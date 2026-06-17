@@ -7,5 +7,5 @@ window.CHATBOT_CONFIG = {
   provider: "groq",
 
   // Pega aqui tu API key
-  apiKey: "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"
+  apiKey: "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"
 };
